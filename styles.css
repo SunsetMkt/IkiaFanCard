@@ -60,9 +60,12 @@
  	z-index: 5;
  }
 
+
+
+
  #ID {
- 	left: 100px;
- 	top: 61px;
+ 	left: 93.402px;
+ 	top: 35.502px;
  	position: absolute;
  	width: 1413px;
  	height: 221px;
@@ -71,14 +74,17 @@
  }
 
  #layer_7 {
- 	left: 60px;
- 	top: 328px;
+ 	left: 56.598px;
+ 	top: 324.398px;
  	position: absolute;
  	width: 1104px;
  	height: 184px;
  	z-index: 7;
  	color: white;
  }
+
+
+
 
  #layer_8 {
  	left: 937px;
@@ -134,16 +140,19 @@
  	z-index: 13;
  }
 
+
+
+
  #ID_2 {
  	font-family: Book Antiqua;
  }
 
  #ID_CONTENT {
  	font-family: Book Antiqua;
- 	font-size: 170.66666666666666px;
+ 	font-size: 255.988px;
  }
 
  #NUM_CONTENT {
  	font-family: TUBA n;
- 	font-size: 170.66666666666666px;
+ 	font-size: 255.988px;
  }
