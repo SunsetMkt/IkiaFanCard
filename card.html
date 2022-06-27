@@ -52,7 +52,7 @@
 	</script>
 	<script>
 		function download() {
-			html2canvas(document.body).then(function (canvas) {
+			html2canvas(document.getElementById('background')).then(function (canvas) {
 				var a = document.createElement('a');
 				a.href = canvas.toDataURL("image/png");
 				a.download = 'IkiaFanCard.png';
@@ -60,12 +60,16 @@
 			});
 		}
 
-		var downloadedFlag = true;
+		var downloadFlag = false;
+
+		window.onload = function () {
+			downloadFlag = true;
+		};
 
 		function clickdownload() {
-			if (downloadedFlag) {
+			if (downloadFlag) {
+				downloadFlag = false;
 				download();
-				downloadedFlag = false;
 			}
 		}
 	</script>
