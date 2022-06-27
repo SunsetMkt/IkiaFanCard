@@ -6,10 +6,11 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<title>IkiaFanCard</title>
 	<link href="styles.css" rel="stylesheet" type="text/css">
+	<script type="text/javascript" src="https://unpkg.com/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
 </head>
 
 <body>
-	<div id="background">
+	<div id="background" onclick="clickdownload();">
 		<div id="layer_1"><img src="images/layer_1.png"></div>
 		<div id="layer_2"><img src="images/layer_2.png"></div>
 		<div id="layer_3"><img src="images/layer_3.png"></div>
@@ -29,6 +30,53 @@
 		<div id="Wildfire"><img src="images/Wildfire.png"></div>
 		<div id="layer_13"><img src="images/layer_13.png"></div>
 	</div>
+	<script>
+		function getURLArgument(name) {
+			// Decode the string
+			var decoded = decodeURIComponent(window.location.search);
+			// Create a regular expression to search for the name parameter
+			var regex = new RegExp("[\\?&]" + name + "=([^&#]*)");
+			// Execute the regular expression
+			var results = regex.exec(decoded);
+			// Return the value
+			return results === null ? "" : results[1];
+		}
+		var id = getURLArgument("id");
+		var num = getURLArgument("num");
+		if (id != null) {
+			document.getElementById("ID_CONTENT").innerHTML = id;
+		}
+		if (num != null) {
+			document.getElementById("NUM_CONTENT").innerHTML = num;
+		}
+	</script>
+	<script>
+		function download() {
+			html2canvas(document.body).then(function (canvas) {
+				var a = document.createElement('a');
+				a.href = canvas.toDataURL("image/png");
+				a.download = 'IkiaFanCard.png';
+				a.click();
+			});
+		}
+
+		var downloadedFlag = true;
+
+		function clickdownload() {
+			if (downloadedFlag) {
+				download();
+				downloadedFlag = false;
+			}
+		}
+	</script>
 </body>
+
+<!--
+	Built with the help of:
+	https://html2canvas.hertzen.com/
+	https://psdtoweb.de/
+
+	IkiaFanCard is a fan card for Ikia.
+-->
 
 </html>
