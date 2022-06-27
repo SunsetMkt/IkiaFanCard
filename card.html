@@ -7,6 +7,17 @@
 	<title>IkiaFanCard</title>
 	<link href="styles.css" rel="stylesheet" type="text/css">
 	<script type="text/javascript" src="https://unpkg.com/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+	<style>
+		/** Selection not allowed */
+		body {
+			-webkit-touch-callout: none;
+			-webkit-user-select: none;
+			-khtml-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+		}
+	</style>
 </head>
 
 <body>
@@ -30,6 +41,7 @@
 		<div id="Wildfire"><img src="images/Wildfire.png"></div>
 		<div id="layer_13"><img src="images/layer_13.png"></div>
 	</div>
+	<div id="generated"></div>
 	<script>
 		function getURLArgument(name) {
 			// Decode the string
@@ -53,6 +65,8 @@
 	<script>
 		function download() {
 			html2canvas(document.getElementById('background')).then(function (canvas) {
+				document.getElementById("generated").innerHTML = '<img src="' + canvas.toDataURL("image/png") + '" />';
+				document.getElementById("background").style.display = "none";
 				var a = document.createElement('a');
 				a.href = canvas.toDataURL("image/png");
 				a.download = 'IkiaFanCard.png';
