@@ -136,15 +136,27 @@
  	z-index: 13;
  }
 
+ @font-face {
+ 	font-family: 'Book Antiqua';
+ 	src: local('Book Antiqua'), url(fonts/Book_Antiqua.ttf) format('truetype');
+ }
 
+ @font-face {
+ 	font-family: 'TUBA n';
+ 	src: local('TUBA n'), url(fonts/TUBA_n.ttf) format('truetype');
+ }
 
+ @font-face {
+ 	font-family: 'Mystery';
+ 	src: url(fonts/方正粗黑宋简体.TTF) format('truetype');
+ }
 
  #ID_2 {
  	font-family: Book Antiqua;
  }
 
  #ID_CONTENT {
- 	font-family: Book Antiqua;
+ 	font-family: Mystery;
  	font-size: 255.988px;
  }
 
