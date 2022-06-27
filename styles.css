@@ -147,8 +147,8 @@
  }
 
  @font-face {
- 	font-family: 'Mystery';
- 	src: url(fonts/方正粗黑宋简体.TTF) format('truetype');
+ 	font-family: 'ShouZhanRenTi';
+ 	src: url(fonts/No.76-ShangShouZhanRenTi-2.ttf) format('truetype');
  }
 
  #ID_2 {
@@ -156,7 +156,7 @@
  }
 
  #ID_CONTENT {
- 	font-family: Mystery;
+ 	font-family: ShouZhanRenTi;
  	font-size: 255.988px;
  }
 
