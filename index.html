@@ -1,82 +1,64 @@
-<!DOCTYPE html
-	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>IkiaFanCard</title>
-	<link href="styles.css" rel="stylesheet" type="text/css">
-	<script type="text/javascript" src="https://unpkg.com/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+    <meta charset="utf-8">
+    <title>IkiaFanCard Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body>
-	<div id="background" onclick="clickdownload();">
-		<div id="layer_1"><img src="images/layer_1.png"></div>
-		<div id="layer_2"><img src="images/layer_2.png"></div>
-		<div id="layer_3"><img src="images/layer_3.png"></div>
-		<div id="IkiaIkia"><img src="images/IkiaIkia.png"></div>
-		<div id="layer_5"><img src="images/layer_5.png"></div>
-		<!--Edit-->
-		<div id="ID"><span id="ID_2"><span style="font-size: 255.988px;">I</span><span
-					style="font-size: 119.994px;">D</span><span style="font-size: 255.988px;">:</span></span><span
-				id="ID_CONTENT">烟灰缸周报</span></div>
-		<div id="layer_7"><span id="ID_2"><span style="font-size: 143.993px;">N</span><span
-					style="font-size: 255.988px;">O:</span></span><span id="NUM_CONTENT">000001</span></div>
-		<!--Edit End-->
-		<div id="layer_8"><img src="images/layer_8.png"></div>
-		<div id="layer_9"><img src="images/layer_9.png"></div>
-		<div id="layer_10"><img src="images/layer_10.png"></div>
-		<div id="ProjectWildfireProje"><img src="images/ProjectWildfireProje.png"></div>
-		<div id="Wildfire"><img src="images/Wildfire.png"></div>
-		<div id="layer_13"><img src="images/layer_13.png"></div>
-	</div>
-	<script>
-		function getURLArgument(name) {
-			// Decode the string
-			var decoded = decodeURIComponent(window.location.search);
-			// Create a regular expression to search for the name parameter
-			var regex = new RegExp("[\\?&]" + name + "=([^&#]*)");
-			// Execute the regular expression
-			var results = regex.exec(decoded);
-			// Return the value
-			return results === null ? "" : results[1];
-		}
-		var id = getURLArgument("id");
-		var num = getURLArgument("num");
-		if (id != null) {
-			document.getElementById("ID_CONTENT").innerHTML = id;
-		}
-		if (num != null) {
-			document.getElementById("NUM_CONTENT").innerHTML = num;
-		}
-	</script>
-	<script>
-		function download() {
-			html2canvas(document.body).then(function (canvas) {
-				var a = document.createElement('a');
-				a.href = canvas.toDataURL("image/png");
-				a.download = 'IkiaFanCard.png';
-				a.click();
-			});
-		}
-
-		var downloadedFlag = true;
-
-		function clickdownload() {
-			if (downloadedFlag) {
-				download();
-				downloadedFlag = false;
-			}
-		}
-	</script>
-</body>
-
-<!--
-	Built with the help of:
-	https://html2canvas.hertzen.com/
-	https://psdtoweb.de/
-
-	IkiaFanCard is a fan card for Ikia.
--->
-
 </html>
+
+<body>
+    <!--
+        id max length: 8 characters or 6 Chinese Characters
+        num max length: 6 and must be numbers
+    -->
+
+    <!--Title-->
+    <div class="title">
+        <h1>获取IkiaFanCard</h1>
+    </div>
+    <!--Title End-->
+
+    <form action="card.html" method="get" id="form">
+        <div>
+            <label for="id">用户名：</label>
+            <input type="text" name="id" id="id" required>
+            <span id="id_notice">建议最长控制在8个英文字符或6个中文字符或11个数字</span>
+        </div>
+        <div>
+            <label for="num">编号：</label>
+            <input type="text" name="num" id="num" maxlength="6" required>
+            <span id="num_notice">最长6个数字</span>
+        </div>
+        <div>
+            <input type="submit" value="获取">
+        </div>
+
+        <script>
+            function getURLArgument(name) {
+                // Decode the string
+                var decoded = decodeURIComponent(window.location.search);
+                // Create a regular expression to search for the name parameter
+                var regex = new RegExp("[\\?&]" + name + "=([^&#]*)");
+                // Execute the regular expression
+                var results = regex.exec(decoded);
+                // Return the value
+                return results === null ? "" : results[1];
+            }
+            var id = getURLArgument("id");
+            var num = getURLArgument("num");
+
+            function autoSubmit() {
+                document.getElementById("id").value = id;
+                document.getElementById("num").value = num;
+                document.getElementById("form").submit();
+            }
+
+            if (id != "" && num != "" && id != null && num != null) {
+                autoSubmit();
+            }
+        </script>
+
+</body>
