@@ -1,0 +1,149 @@
+ body {
+ 	margin: 0;
+ 	padding: 0;
+ }
+
+ #background {
+ 	left: 0px;
+ 	top: 0px;
+ 	position: relative;
+ 	margin-left: auto;
+ 	margin-right: auto;
+ 	width: 2000px;
+ 	height: 2000px;
+ 	overflow: hidden;
+ 	z-index: 0;
+ }
+
+ #layer_1 {
+ 	left: -1px;
+ 	top: -1px;
+ 	position: absolute;
+ 	width: 2002px;
+ 	height: 2003px;
+ 	z-index: 1;
+ }
+
+ #layer_2 {
+ 	left: -775px;
+ 	top: -189px;
+ 	position: absolute;
+ 	width: 3892px;
+ 	height: 2189px;
+ 	z-index: 2;
+ }
+
+ #layer_3 {
+ 	left: 1252px;
+ 	top: 369px;
+ 	position: absolute;
+ 	width: 373px;
+ 	height: 136px;
+ 	z-index: 3;
+ }
+
+ #IkiaIkia {
+ 	left: 57px;
+ 	top: 1387px;
+ 	position: absolute;
+ 	width: 85px;
+ 	height: 546px;
+ 	z-index: 4;
+ }
+
+ #layer_5 {
+ 	left: 1405px;
+ 	top: 1397px;
+ 	position: absolute;
+ 	width: 518px;
+ 	height: 518px;
+ 	z-index: 5;
+ }
+
+ #ID {
+ 	left: 100px;
+ 	top: 61px;
+ 	position: absolute;
+ 	width: 1413px;
+ 	height: 221px;
+ 	z-index: 6;
+ 	color: white;
+ }
+
+ #layer_7 {
+ 	left: 60px;
+ 	top: 328px;
+ 	position: absolute;
+ 	width: 1104px;
+ 	height: 184px;
+ 	z-index: 7;
+ 	color: white;
+ }
+
+ #layer_8 {
+ 	left: 937px;
+ 	top: 1033px;
+ 	position: absolute;
+ 	width: 1002px;
+ 	height: 235px;
+ 	z-index: 8;
+ }
+
+ #layer_9 {
+ 	left: 758px;
+ 	top: 711px;
+ 	position: absolute;
+ 	width: 1002px;
+ 	height: 234px;
+ 	z-index: 9;
+ }
+
+ #layer_10 {
+ 	left: 1284px;
+ 	top: 1060px;
+ 	position: absolute;
+ 	width: 76px;
+ 	height: 140px;
+ 	z-index: 10;
+ }
+
+ #ProjectWildfireProje {
+ 	left: 773px;
+ 	top: 580px;
+ 	position: absolute;
+ 	width: 1024px;
+ 	height: 65px;
+ 	z-index: 11;
+ }
+
+ #Wildfire {
+ 	left: 175px;
+ 	top: 1522px;
+ 	position: absolute;
+ 	width: 1638px;
+ 	height: 361px;
+ 	z-index: 12;
+ }
+
+ #layer_13 {
+ 	left: 46px;
+ 	top: 451px;
+ 	position: absolute;
+ 	width: 1402px;
+ 	height: 1549px;
+ 	z-index: 13;
+ }
+
+ #ID_2 {
+ 	font-family: Book Antiqua;
+ }
+
+ #ID_CONTENT {
+ 	font-family: Book Antiqua;
+ 	font-size: 170.66666666666666px;
+ }
+
+ #NUM_CONTENT {
+ 	font-family: TUBA n;
+ 	font-size: 170.66666666666666px;
+ }
